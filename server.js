@@ -10,3 +10,6 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+app.length('/app/', (req, res) => {
+    res.status(200).send('200 OK');
+})
