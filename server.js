@@ -22,7 +22,13 @@ app.get('/app/rpsls/', (req, res) => {
     res.status(200).json(RPSLS());
 })
 
+app.post('/app/rps/play/', (req, res) => {
+    res.status(200).json(RPS(req.body.shot));
+})
 
+app.post('/app/rps/play/:shot', (req, res) => {
+    res.status(200).json(RPS(req.params.shot));
+})
 
 
 
