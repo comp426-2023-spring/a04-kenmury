@@ -38,6 +38,10 @@ app.get('/app/rpsls/play/:shot', (req, res) => {
     res.status(200).json(RPSLS(req.params.shot));
 })
 
+app.get('/app/rps/play/', (req, res) => {
+    res.status(200).json(RPS(req.query.shot));
+})
+
 
 
 
