@@ -42,9 +42,12 @@ app.get('/app/rps/play/', (req, res) => {
     res.status(200).json(RPS(req.query.shot));
 })
 
+app.get('/app/rpsls/play/', (req, res) => {
+    res.status(200).json(RPSLS(req.query.shot));
+})
 
-
-
-
+app.use((req, res) => {
+    res.status(404).send('NOT FOUND');
+  });
 
 app.listen(port);
