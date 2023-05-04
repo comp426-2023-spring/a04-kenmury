@@ -26,8 +26,16 @@ app.post('/app/rps/play/', (req, res) => {
     res.status(200).json(RPS(req.body.shot));
 })
 
-app.post('/app/rps/play/:shot', (req, res) => {
+app.get('/app/rps/play/:shot', (req, res) => {
     res.status(200).json(RPS(req.params.shot));
+})
+
+app.post('/app/rpsls/play/', (req, res) => {
+    res.status(200).json(RPSLS(req.body.shot));
+})
+
+app.get('/app/rpsls/play/:shot', (req, res) => {
+    res.status(200).json(RPSLS(req.params.shot));
 })
 
 
